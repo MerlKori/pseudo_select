@@ -1,0 +1,67 @@
+
+* 
+    box-sizing: border-box
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,img, ul, li, form, label, article, aside, footer, header, nav, section 
+			  margin: 0
+			  padding: 0
+			  border: 0
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section
+	display: block
+
+a
+  text-decoration: none
+img 
+   width: 100%
+
+body 
+   width: 100%
+   height: 100vh
+   font-family: 'Open Sans', sans-serif;
+
+.pseudo-select
+    width: 200px
+    position: relative
+
+    &::after
+      content: ' '
+      position: absolute
+      top: 12px
+      right: 7%
+      width: 10px
+      height: 10px
+      border-top: 2px solid #333
+      border-left: 2px solid #333
+      transform: rotate(-135deg)
+      transition: all .5s
+
+.pseudo-select--active
+      &::after
+        top: 19px
+        transform: rotate(45deg)  
+
+.pseudo-select__main
+     display: block
+     width: 100%
+     font-size: 18px
+     padding: .5em
+     background-color: transparent
+     color: #333
+     border: 2px solid #333
+     
+.pseudo-select__list
+     max-height: 0
+     border: 2px solid #333
+     border-top: none
+     overflow: hidden
+     transition: all .75s
+
+.pseudo-select__list--active
+     max-height: 150px
+     overflow-y: auto
+
+.list__item
+     padding: .3em
+     border-bottom: 1px solid #333
